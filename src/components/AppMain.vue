@@ -44,7 +44,6 @@ export default {
 
 <style lang="scss" scoped>
 .main_container {
-  background-color: grey;
-  height: 100%;
+  height: 100vh;
 }
 </style>

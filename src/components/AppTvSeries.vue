@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="serieTv">
     <div>
       {{ name }}
     </div>
