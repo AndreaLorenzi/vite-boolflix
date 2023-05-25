@@ -18,32 +18,33 @@ export default {
 </script>
 
 <template>
-  <div class="main_container">
+  <div class="cards_container">
+    <h2>Film</h2>
     <div class="movies">
-      <AppMovies
-        v-for="movies in store.ArrMovies"
-        :key="movies.id"
-        :title="movies.title"
-        :original_title="movies.original_title"
-        :original_language="movies.original_language"
-        :vote_average="movies.vote_average"
-      />
+      <AppMovies v-for="movies in store.ArrMovies" :key="movies.id" :DataMovies="movies" />
     </div>
+    <h2>Serie TV</h2>
     <div class="series">
-      <AppTvSeries
-        v-for="series in store.ArrTvSeries"
-        :key="series.id"
-        :name="series.name"
-        :original_name="series.original_name"
-        :original_language="series.original_language"
-        :vote_average="series.vote_average"
-      />
+      <AppTvSeries v-for="series in store.ArrTvSeries" :key="series.id" :DataTvSeries="series" />
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.main_container {
-  height: 100vh;
+.cards_container {
+    background-color: grey;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies {
+    display: flex;
+    overflow: auto;
+}
+
+.series {
+    display: flex;
+    overflow: auto;
 }
 </style>

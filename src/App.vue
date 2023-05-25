@@ -41,7 +41,25 @@ export default {
         .then((response) => (this.store.ArrTvSeries = response.data.results));
     },
   },
+  created() {
+    axios
+      .get('https://api.themoviedb.org/3/movie/popular', {
+        params: {
+          api_key: 'eb23ddad3aedd7c42657c036d4ffbb5d'
+        }
+      })
+      .then(response => (this.store.ArrMovies = response.data.results));
+
+    axios
+      .get('https://api.themoviedb.org/3/tv/popular', {
+        params: {
+          api_key: 'eb23ddad3aedd7c42657c036d4ffbb5d'
+        }
+      })
+      .then(response => (this.store.ArrTvSeries = response.data.results));
+  }
 };
+
 </script>
 
 <template>
@@ -50,6 +68,7 @@ export default {
 </template>
 
 <style lang="scss">
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 * {
   margin: 0;
   padding: 0;
