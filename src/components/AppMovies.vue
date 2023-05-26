@@ -53,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 .card_movies {
     border: 1px solid black;
-    color: rgb(30, 41, 92);
+    color: darkorange;
     padding: 0.5rem;
     margin: .5rem 1rem;
 }

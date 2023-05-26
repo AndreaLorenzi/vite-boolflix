@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .cards_container {
-    background-color: grey;
+    background-color: black;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
